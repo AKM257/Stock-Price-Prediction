@@ -8,11 +8,8 @@ from datetime import datetime
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
-try:
-    model = joblib.load('Stock_prediction.pkl')
-except FileNotFoundError:
-    st.error("Error: 'Stock Price.pkl' model file not found. Please ensure it's in the same directory.")
-    st.stop() 
+model = joblib.load('Stock_prediction.pkl')
+
 
 st.title(" AI Stock Price Prediction Tool")
 
